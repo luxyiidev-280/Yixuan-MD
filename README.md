@@ -1,51 +1,48 @@
-# Yixuan-MD • Auric Core
+## ✨ Sobre o projeto
 
-Base limpa da **Yixuan-MD**, preparada para GitHub e instalação em Termux, VPS ou painel.
+A **Yixuan-MD** é uma base de bot para WhatsApp criada com foco em organização, estabilidade e facilidade de instalação.
 
-## Estrutura incluída
+O projeto foi limpo para GitHub, mantendo apenas os arquivos importantes para uso público e instalação. Arquivos sensíveis, sessão do WhatsApp, logs reais, cache e dependências locais ficam fora do repositório.
 
-- `commands/` comandos do bot
-- `core/` loader, router e guard principal
-- `system/` sistemas internos da base
-- `dados/org/funcoes/` funções/canvas locais
-- `database/` JSONs iniciais limpos
-- `media/menu/` imagens usadas pelos menus e comandos
-- `storage/` apenas pastas vazias com `.gitkeep`
-- `logs/` apenas pasta vazia com `.gitkeep`
-- `instalar.sh` instalador automático
-- `.env.example` modelo seguro de configuração
+---
 
-## Não incluído no GitHub
+## ⚙️ Principais recursos
 
-- `.env` real
-- sessão do WhatsApp
-- `node_modules/`
-- logs reais
-- cache/temporários
-- backups locais
+- Estrutura modular por pastas.
+- Loader automático de comandos.
+- Router centralizado para execução segura.
+- Sistema de configuração por `.env`.
+- Pastas preparadas para sessão, cache, banco local e logs.
+- Banco inicial em JSON.
+- Suporte a comandos de membros, admins, dono, menus e downloads.
+- Funções locais para canvas/imagens em `dados/org/funcoes/`.
+- Arquitetura pensada para hospedagem em painel, VPS ou Termux.
+- Segurança básica para evitar vazamento de `.env`, sessão e arquivos temporários.
 
-## Instalação
+---
 
-```bash
-chmod +x instalar.sh
-./instalar.sh
-```
+## 📁 Estrutura incluída
 
-Depois configure o `.env` criado a partir do `.env.example`:
-
-```env
-OWNER_NUMBERS=5511999999999
-OWNER_LIDS=157544450392085@lid
-ZEROTWO_API_KEY=SUA_KEY
-GEMINI_API_KEY=SUA_KEY
-```
-
-Iniciar:
-
-```bash
-npm start
-```
-
-## Observação
-
-A pasta `storage/session/` fica fora do GitHub para não vazar sessão do WhatsApp. Apagar isso em repo público seria o mínimo civilizatório, mas a internet ainda precisa de aviso.
+```txt
+Yixuan-MD/
+├── commands/              # Comandos do bot
+│   ├── admins/            # Comandos administrativos
+│   ├── dono/              # Comandos exclusivos do dono
+│   ├── downloads/         # Comandos de download
+│   ├── members/           # Comandos públicos/membros
+│   └── menus/             # Menus do bot
+│
+├── core/                  # Loader, router e guard principal
+├── system/                # Sistemas internos da base
+├── dados/org/funcoes/     # Funções locais e canvas
+├── database/              # JSONs iniciais limpos
+├── media/menu/            # Imagens usadas por menus e comandos
+├── storage/               # Sessão, cache e temporários locais
+├── logs/                  # Logs locais
+│
+├── index.js               # Entrada principal
+├── connection.js          # Conexão do bot
+├── instalar.sh            # Instalador automático
+├── package.json           # Dependências e scripts
+├── .env.example           # Modelo seguro de configuração
+└── .gitignore             # Proteção contra arquivos sensíveis
