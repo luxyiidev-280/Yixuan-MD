@@ -1,0 +1,36 @@
+{
+  "name": "yixuan-md",
+  "version": "1.0.0",
+  "description": "Yixuan-MD • Bot WhatsApp público, leve, automático e profissional.",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "author": "Luxyii - Dev",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file=.env index.js",
+    "dev": "node --env-file=.env --watch index.js",
+    "check": "node --check index.js",
+    "check:all": "node --check index.js && node --check connection.js && node --check system/environment.js && node --check system/bootstrap.js && node --check core/router.js",
+    "start:gc": "node --expose-gc --env-file=.env index.js",
+    "check:commands": "find commands system core -name \"*.js\" -print0 | xargs -0 -n1 node --check"
+  },
+  "imports": {
+    "#system/*": "./system/*",
+    "#core/*": "./core/*",
+    "#commands/*": "./commands/*",
+    "#database/*": "./database/*"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "baileys": "7.0.0-rc13",
+    "pino": "10.3.1",
+    "qrcode": "1.5.4",
+    "qrcode-terminal": "0.12.0",
+    "skia-canvas": "3.0.8",
+    "wa-sticker-formatter": "4.4.4"
+  }
+}

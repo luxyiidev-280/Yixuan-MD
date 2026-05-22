@@ -1,0 +1,33 @@
+# dependências
+node_modules/
+
+# segredos
+.env
+.env.*
+!.env.example
+
+# sessão do WhatsApp
+storage/session/*
+!storage/session/.gitkeep
+
+# temporários/cache
+storage/temp/*
+!storage/temp/.gitkeep
+storage/cache/*
+!storage/cache/.gitkeep
+
+# logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# backups locais
+*.bak
+*.tmp
+*.zip
