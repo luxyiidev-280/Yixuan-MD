@@ -12,11 +12,12 @@
   },
   "scripts": {
     "start": "node --env-file=.env index.js",
-    "dev": "node --env-file=.env --watch index.js",
+    "dev": "node system/ensure-env.js && node --env-file=.env --watch index.js",
     "check": "node --check index.js",
     "check:all": "node --check index.js && node --check connection.js && node --check system/environment.js && node --check system/bootstrap.js && node --check core/router.js",
     "start:gc": "node --expose-gc --env-file=.env index.js",
-    "check:commands": "find commands system core -name \"*.js\" -print0 | xargs -0 -n1 node --check"
+    "check:commands": "find commands system core -name \"*.js\" -print0 | xargs -0 -n1 node --check",
+    "prestart": "node system/ensure-env.js"
   },
   "imports": {
     "#system/*": "./system/*",
