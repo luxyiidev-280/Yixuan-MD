@@ -1,3 +1,15 @@
+<div align="center">
+
+<img src="https://deposit.pictures/p/9204ada7a1114cc28bae630d75e2b8c8" width="100%">
+
+# 💠 Yixuan-MD
+
+_Base WhatsApp focada em estabilidade, organização e performance._
+
+</div>
+
+---
+
 ## ✨ Sobre o projeto
 
 A **Yixuan-MD** é uma base de bot para WhatsApp criada com foco em organização, estabilidade e facilidade de instalação.
