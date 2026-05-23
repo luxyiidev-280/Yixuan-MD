@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://deposit.pictures/p/9204ada7a1114cc28bae630d75e2b8c8" width="100%">
+<img src="./media/menu/foto_bot.png" width="100%">
 
 # 💠 Yixuan-MD
 
